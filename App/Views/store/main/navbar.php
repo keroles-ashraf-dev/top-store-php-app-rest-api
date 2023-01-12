@@ -35,13 +35,13 @@
         </div>
       </div>
       <div id="js-nav-account-box" class="account-box">
-        <a href="<?php echo url("/profile") ?>">
-          <i class="fa-solid fa-user fa-lg"></i>
-        </a>
+        <i class="fa-solid fa-user fa-lg"></i>
         <div class="account-dropdown">
           <?php if (isset($user)) : ?>
-            <span><?php echo ucfirst($user->first_name) . ' ' . ucfirst($user->last_name) ?></span>
-            <span><?php echo $user->email ?></span>
+            <a href="<?php echo url("/profile") ?>">
+              <span><?php echo ucfirst($user->first_name) . ' ' . ucfirst($user->last_name) ?></span>
+              <span><?php echo $user->email ?></span>
+            </a>
             <a href="<?php echo url('/logout') ?>">
               <button data-translationKey="signOut">Sign out</button>
             </a>

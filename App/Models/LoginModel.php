@@ -47,7 +47,6 @@ class LoginModel extends Model
 
         $isPasswordValid = password_verify($password, $user->password);
 
-        $user->password = '';
         $this->user = $user;
 
         return $isPasswordValid;
@@ -74,7 +73,6 @@ class LoginModel extends Model
         $userId = $this->select('user_id')->where('token=?', $token)->fetch($this->authTokensTable)->user_id;
         $user = $this->select('*')->where('id=?', $userId)->fetch($this->table);
         $user->token = $token;
-        $user->password = '';
 
         if (!$user) {
             return false;

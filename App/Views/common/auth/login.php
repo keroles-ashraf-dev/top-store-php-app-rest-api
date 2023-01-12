@@ -22,11 +22,13 @@
       <div class="email-box">
         <label for="email" data-translationKey="emailOrPhoneNumber">Email or phone number</label>
         <input type="email" dir="ltr" name="email" id="email" maxlength="128" required />
+        <span class="test-note">for testing use: test@mail.com</span>
       </div>
 
       <div class="password-box">
         <label for="password" data-translationKey="password">Password</label>
         <input type="password" dir="auto" name="password" id="password" maxlength="128" required />
+        <span class="test-note">for testing use: 12345678</span>
       </div>
 
       <input type="hidden" name="form-token" value="<?php echo $token ?>" />
