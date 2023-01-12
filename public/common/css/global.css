@@ -1,0 +1,73 @@
+/* start global variables */
+:root {
+
+  --theme-color: #f08804;
+  --theme-color-light: #f0c14b;
+  --yellow-color: #FFD814;
+  --blue-color: #0066c0;
+  --light-grey-color: #37475A;;
+  --grey-color: #232f3e;;
+  --dark-grey-color: #131921;
+
+  --screen-cover-z-index: 2;
+  --popup-menu-z-index: 3;
+  --hamburger-menu-z-index: 3;
+  --model-z-index: 3;
+}
+/* global rules */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.padding-container {
+  width: 100%;
+  padding-inline-start: 15px;
+  padding-inline-end: 15px;
+}
+
+.margin-container {
+  width: 100%;
+  margin-inline-start: 15px;
+  margin-inline-end: 15px;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:hover {
+  filter: brightness(80%);
+}
+
+a {
+  text-decoration: none;
+  color: var(--blue-color);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.show {
+  display: block !important;
+}
+
+.hide {
+  display: none !important;
+}
+
+.info {
+  color: rgb(0, 77, 193);
+  background-color: rgb(195, 214, 244);
+}
+
+.error {
+  color: rgb(202, 0, 0);
+  background-color: rgba(255, 0, 0, 0.2);
+}

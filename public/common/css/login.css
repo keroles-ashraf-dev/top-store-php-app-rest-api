@@ -1,0 +1,202 @@
+.login {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  background-color: #fff;
+}
+
+.login .header {
+  width: 100%;
+  height: 50px;
+  padding: 10px;
+  background-color: #131921;
+  display: flex;
+  align-items: center;
+  flex: 0 1 auto;
+}
+
+.login .logo {
+  width: fit-content;
+  height: 25px;
+  cursor: pointer;
+}
+
+.login .logo img {
+  max-width: 100%;
+  max-height: 100%;
+  margin: auto;
+  display: block;
+}
+
+.login .form-box {
+  width: 340px;
+  height: fit-content;
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  overflow: hidden;
+  flex: 0 1 auto;
+}
+
+.login .form-box .response-container {
+  width: 100%;
+  font-size: 12px;
+  line-height: 1.5;
+  padding: 14px 14px;
+  margin-bottom: 8px;
+  border-radius: 4px;
+  display: none;
+}
+
+.login .form-box .head {
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 1.2;
+}
+
+.login .form-box .email-box {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  width: 300px;
+}
+
+.login .form-box .password-box {
+  margin-bottom: 30px;
+  width: 300px;
+}
+
+.login .form-box input {
+  width: 100%;
+  height: 31px;
+  padding: 3px 7px;
+  overflow: hidden;
+  outline: none;
+  border-radius: 4px;
+  border: 1px solid rgb(139, 139, 139);
+  background-color: #fff;
+  margin-top: 4px;
+}
+
+.login .form-box input:focus {
+  border: 2px solid var(--theme-color);
+  box-shadow: 0 0 10px 1px var(--theme-color-light);
+}
+
+.login .form-box label {
+  margin-inline-start: 2px;
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.login .form-box .submit-btn button {
+  width: 100%;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  margin-bottom: 20px;
+  background: linear-gradient(to bottom, #f7dfa5, #f0c14b);
+  color: #000;
+  font-size: 14px;
+  border: 1px solid rgb(133, 133, 133);
+  border-radius: 4px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.login .form-box .keep-signed-box {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  font-size: 12px;
+  margin-bottom: 15px;
+  margin-inline-start: 4px;
+}
+
+.login .form-box .keep-signed-box input {
+  width: 13px;
+  height: 13px;
+  margin-inline-end: 8px;
+  margin-top: 0px;
+}
+
+.login .form-box .privacy-box {
+  font-size: 12px;
+  line-height: 17px;
+  margin-bottom: 20px;
+  line-height: 20px;
+}
+
+.login .form-box .help-box .btn {
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.login .form-box .help-box .btn span {
+  color: rgb(0, 102, 255);
+}
+
+.login .form-box .help-box .actions {
+  margin-top: 10px;
+  font-size: 12px;
+  margin-inline-start: 8px;
+  display: none;
+}
+
+.login .form-box .help-box .actions a {
+  display: block;
+  margin-top: 8px;
+}
+
+.login .divider {
+  width: 340px;
+  height: fit-content;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.login .divider span {
+  display: inline-block;
+  height: 1px;
+  width: 100%;
+  background-color: rgb(199, 199, 199);
+}
+
+.login .divider h5 {
+  width: fit-content;
+  padding-inline-start: 8px;
+  padding-inline-end: 8px;
+  background-color: rgb(255, 255, 255);
+  color: #767676be;
+  position: relative;
+  display: inline-block;
+  top: 22px;
+  margin: 0px;
+}
+
+.login .create-account button {
+  width: 340px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  background: linear-gradient(to bottom, #f7f8fa, #e7e9ec);
+  border: 1px solid rgb(133, 133, 133);
+  border-radius: 4px;
+  overflow: hidden;
+  cursor: pointer;
+  margin-bottom: 40px;
+}
+
+.login .create-account button a {
+  color: #000;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+/* xxl screens */
+@media (min-height: 720px) {
+
+  .login {
+    height: 100vh;
+  }
+}

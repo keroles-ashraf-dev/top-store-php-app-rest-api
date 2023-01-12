@@ -1,0 +1,11 @@
+{
+  "workbench.editor.showTabs": true,
+  "workbench.editor.wrapTabs": true,
+  "workbench.editor.enablePreview": false,
+  "explorer.compactFolders": false,
+  "explorer.autoReveal": false,
+  "editor.insertSpaces": false,
+  "editor.tabSize": 2,
+  "intelephense.telemetry.enabled": false,
+  "editor.linkedEditing": true,
+}

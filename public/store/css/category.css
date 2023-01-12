@@ -1,0 +1,222 @@
+.category-page {
+  display: grid;
+  gap: 10px 10px;
+  padding-bottom: 50px;
+  grid-template-columns: 10% calc(90% - 10px);
+  grid-template-rows: repeat(3, auto);
+  grid-template-areas:
+    'sub-categories sub-categories'
+    'filtering products'
+    'pagination pagination'
+}
+
+.sub-categories-container {
+  grid-area: sub-categories;
+}
+
+.filtering-container {
+  grid-area: filtering;
+}
+
+.products-container {
+  grid-area: products;
+}
+
+.pagination-container {
+  grid-area: pagination;
+}
+
+.sub-categories-container {
+  height: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  overflow: auto;
+  padding-block: 10px;
+  padding-inline: 20px;
+  background-color: #fafafa;
+  border-bottom: 1px rgb(199, 199, 199) solid;
+}
+
+.sub-categories-container a {
+  color: black;
+  margin-inline-end: 12px;
+  font-size: 12px;
+}
+
+.filtering-container {
+  display: flex;
+  flex-flow: column wrap;
+  border-inline-end: 1px rgb(199, 199, 199) solid;
+  padding-inline: 4px;
+  font-size: 10px;
+}
+
+.filtering-container form {
+  width: 100%;
+}
+
+.filtering-container .title {
+  font-size: 12px;
+  font-weight: 400;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.filtering-container .title:first-child {
+  margin-top: 0px;
+}
+
+.filtering-container input {
+  cursor: pointer;
+}
+
+.filtering-container span {
+  margin-inline-start: 4px;
+}
+
+.filtering-container .filters {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: flex-start;
+  align-content: start;
+  border-bottom: 1px rgb(199, 199, 199) solid;
+  padding-bottom: 4px;
+  padding-inline: 4px;
+}
+
+.filtering-container .filters div {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.filtering-container .sorters {
+  display: flex;
+  flex-flow: column wrap;
+  padding-inline: 4px;
+}
+
+.filtering-container .sorters div {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.filtering-container .action {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.filtering-container .action button {
+  border: 1px rgb(202, 202, 202) solid;
+  background-color: #fafafa;
+  padding-inline: 16px;
+  padding-block: 6px;
+  border-radius: 4px;
+  font-size: 10px;
+}
+
+.products-container {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  padding-bottom: 30px;
+}
+
+.products-container .product-card {
+  width: 25%;
+  padding: 10px;
+}
+
+.products-container .product-card a {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.products-container .product-card span {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 12px;
+}
+
+.products-container .product-card a:hover {
+  text-decoration: none;
+}
+
+.products-container .product-card .img-container {
+  width: 115px;
+  height: 130px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.products-container .product-card .img-container img {
+  width: 100%;
+}
+
+.products-container .product-card .name {
+  margin-block: 8px;
+  color: black;
+}
+
+.products-container .product-card .discount {
+  width: fit-content;
+  color: rgb(255, 255, 255);
+  background-color: #CC0C39;
+  padding-inline: 10px;
+  padding-block: 5px;
+  margin-bottom: 5px;
+  font-size: 10px;
+}
+
+.products-container .product-card .price {
+  color: var(--blue-color);
+  font-size: 14px;
+}
+
+.products-container .product-card .old-price {
+  color: var(--light-grey-color);
+}
+
+.products-container .product-card .stock {
+  color: rgb(0, 161, 40);
+}
+
+.products-container .product-card .rating-container {
+  color: rgb(255, 196, 0);
+  font-size: 12px;
+}
+
+.products-container .product-card .rating-container span:nth-child(2) {
+  color: var(--blue-color);
+}
+
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.pagination-container a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color .3s;
+}
+
+.pagination-container a.active {
+  background-color: var(--grey-color);
+  color: white;
+}
+
+.pagination-container a:hover:not(.active) {
+  background-color: #ddd;
+}

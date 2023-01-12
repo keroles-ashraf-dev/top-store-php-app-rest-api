@@ -1,0 +1,47 @@
+body .screen-cover {
+  display: none;
+  position: fixed;
+  top: 0;
+  inset-inline-start: 0;
+  height: 100%;
+  width: 100%;
+  z-index: var(--screen-cover-z-index);
+  background-color: #00000093;
+}
+
+body .content-cover {
+  display: none;
+  position: fixed;
+  top: 100px;
+  inset-inline-start: 0;
+  height: 100%;
+  width: 100%;
+  z-index: var(--screen-cover-z-index);
+  background-color: #00000093;
+}
+
+body .loading-screen {
+  display: none;
+  position: fixed;
+  top: 0;
+  inset-inline-start: 0;
+  height: 100%;
+  width: 100%;
+  z-index: var(--screen-cover-z-index);
+  background-color: #00000093;
+}
+
+body .loading-screen .circular-progress {
+  border: 6px solid transparent;
+  border-radius: 50%;
+  border-top: 6px solid var(--theme-color);
+  width: 80px;
+  height: 80px;
+  animation: spin 1s linear infinite;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}

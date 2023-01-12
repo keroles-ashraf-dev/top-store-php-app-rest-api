@@ -1,0 +1,22 @@
+{
+	"dir": "rtl",
+	"deliverTo": "توصيل الي",
+	"signIn": "تسجيل دخول",
+	"signOut": "تسجيل خروج",
+	"emailOrPhoneNumber": "البريد الالكتروني او رقم الهاتف",
+	"password": "كلمة المرور",
+	"continue": "متابعة",
+	"keepMeSignedIn": "ابقى متصلاً على هذا الجهاز",
+	"loginPrivacyHint": "بالاستمرار، أنت توافق على",
+	"conditionsOfUse": "شروط الاستخدام",
+	"privacyNotice": "إشعار الخصوصية",
+	"ForgetYourPassword": "هل نسيت كلمة المرور؟",
+	"OtherIssuesWithSignIn": "مشاكل أخرى حول تسجيل الدخول",
+	"newToAmazon": "جديد؟",
+	"CreateYourAmazonAccount": "إنشاء حساب لك في أمازون",
+	"needHelp?": "هل أنت بحاجة إلى المساعدة؟",
+	"help": "مساعدة",
+	"and": "و",
+	"search": "بحث...",
+	"todayDeals": "عروض اليوم"
+}

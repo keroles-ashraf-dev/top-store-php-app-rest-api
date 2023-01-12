@@ -1,0 +1,168 @@
+.center-page {
+  padding-inline: 20%;
+  padding-block: 30px;
+  min-height: 100vh;
+}
+
+.breadcrumb {
+  margin-bottom: 30px;
+}
+
+.breadcrumb ol {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-flow: row nowrap;
+  font-size: 14px;
+  align-items: center;
+}
+
+.breadcrumb ol li {
+  margin-inline: 6px;
+}
+
+.breadcrumb ol li:first-child {
+  margin-inline-start: 0px;
+}
+
+.breadcrumb ol i {
+  font-size: 10px;
+}
+
+.response-container {
+  width: fit-content;
+  font-size: 14px;
+  line-height: 1.5;
+  padding: 8px 20px;
+  border-radius: 6px;
+  display: none;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.addresses {
+  display: flex;
+  flex-flow: column wrap;
+  margin-block: 30px;
+  min-height: 100vh;
+}
+
+.addresses .hint {
+  font-size: 12px;
+  color: rgb(141, 141, 141);
+  margin-inline-start: 6px;
+}
+
+.addresses .content {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+}
+
+.addresses .content .card {
+  display: flex;
+  flex-flow: column nowrap;
+  border: #c0c0c0 1px solid;
+  border-radius: 6px;
+  width: 200px;
+  height: 200px;
+  padding: 12px;
+  margin-inline: 10px;
+  margin-block: 10px;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.addresses .content .card .address {
+  display: flex;
+  flex-flow: column wrap;
+  font-size: 15px;
+}
+
+.addresses .content .card .address .default{
+  text-align: center;
+  margin: 0px;
+}
+
+.addresses .content .card .actions button {
+  border: none;
+  background-color: transparent;
+  color: var(--blue-color);
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.addresses .content .card a {
+  width: 100%;
+  height: 100%;
+}
+
+.addresses .content .add-card {
+  border: 3px dotted #c0c0c0;
+}
+
+.addresses .content .add-card a {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  color: rgb(167, 167, 167);
+}
+
+.form-box {
+  border: #c0c0c0 1px solid;
+  border-radius: 6px;
+  padding: 20px;
+}
+
+.form-box .form-info {
+  display: block;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.form-box label {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.form-box input,
+.form-box select {
+  margin-bottom: 18px;
+  padding: 6px 4px;
+  overflow: hidden;
+  outline: none;
+  border-radius: 4px;
+  border: 1px solid rgb(139, 139, 139);
+  width: 220px;
+  font-size: 12px;
+}
+
+.form-box input:focus {
+  border: 2px solid var(--theme-color);
+  box-shadow: 0 0 10px 1px var(--theme-color-light);
+}
+
+.form-box button {
+  background-color: var(--theme-color-light);
+  margin-top: 20px;
+  outline: none;
+  border-radius: 4px;
+  border: 1px solid rgb(139, 139, 139);
+  font-size: 12px;
+  padding-inline: 16px;
+  padding-block: 6px;
+}
+
+.form-box .country-box select {
+  cursor: pointer;
+  appearance: none;
+  background-color: transparent;
+}
+
+.form-box .country-box span {
+  display: none;
+}

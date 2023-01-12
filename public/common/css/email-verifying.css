@@ -1,0 +1,150 @@
+.email-verifying {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  background-color: #fff;
+}
+
+.email-verifying .header {
+  width: 100%;
+  height: 50px;
+  padding: 10px;
+  background-color: #131921;
+  display: flex;
+  align-items: center;
+  flex: 0 1 auto;
+}
+
+.email-verifying .logo {
+  width: fit-content;
+  height: 25px;
+  cursor: pointer;
+}
+
+.email-verifying .logo img {
+  max-width: 100%;
+  max-height: 100%;
+  margin: auto;
+  display: block;
+}
+
+.email-verifying .form-box {
+  width: 340px;
+  height: fit-content;
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  overflow: hidden;
+  flex: 0 1 auto;
+}
+
+.email-verifying .form-box .response-container {
+  width: 100%;
+  font-size: 12px;
+  line-height: 1.5;
+  padding: 14px 14px;
+  margin-bottom: 8px;
+  border-radius: 4px;
+  display: none;
+}
+
+.email-verifying .form-box .head {
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+
+.email-verifying .form-box .sub-head {
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.email-verifying .form-box .otp-box {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  width: 300px;
+}
+
+.email-verifying .form-box input {
+  width: 100%;
+  height: 31px;
+  padding: 3px 7px;
+  overflow: hidden;
+  outline: none;
+  border-radius: 4px;
+  border: 1px solid rgb(139, 139, 139);
+  background-color: #fff;
+
+}
+
+.email-verifying .form-box input:focus {
+  border: 2px solid var(--theme-color);
+  box-shadow: 0 0 10px 1px var(--theme-color-light);
+}
+
+.email-verifying .form-box label {
+  margin-inline-start: 2px;
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.email-verifying .form-box .new-otp-box {
+  font-size: 12px;
+  color: rgb(0, 129, 86);
+  margin-bottom: 15px;
+  display: none;
+}
+
+.email-verifying .form-box .new-otp-box i {
+  font-size: 14px;
+}
+
+.email-verifying .form-box .submit-btn button {
+  width: 100%;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  margin-bottom: 20px;
+  background: linear-gradient(to bottom, #f7dfa5, #f0c14b);
+  color: #000;
+  font-size: 13px;
+  border: 1px solid rgb(133, 133, 133);
+  border-radius: 4px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.email-verifying .form-box .resend-otp-box {
+  font-size: 13px;
+  margin-top: 15px;
+  text-align: center;
+}
+
+.email-verifying .form-box .resend-otp-box button {
+  background: transparent;
+  border: none;
+  color: var(--blue-color);
+  cursor: pointer;
+}
+
+.email-verifying .form-box .note-box {
+  font-size: 11px;
+  line-height: 1.8;
+  margin-top: 15px;
+  text-align: start;
+}
+
+.email-verifying .form-box .note-box li {
+  margin-inline-start: 20px;
+}
+
+/* xxl screens */
+@media (min-height: 640px) {
+
+  .email-verifying {
+    height: 100vh;
+  }
+}

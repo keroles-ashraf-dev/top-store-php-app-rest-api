@@ -1,0 +1,170 @@
+.register {
+	width: 100%;
+	height: fit-content;
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	background-color: #fff;
+}
+
+.register .header {
+	width: 100%;
+	height: 50px;
+	padding: 10px;
+	background-color: #131921;
+	display: flex;
+	align-items: center;
+	flex: 0 1 auto;
+}
+
+.register .logo {
+	width: fit-content;
+	height: 25px;
+	cursor: pointer;
+}
+
+.register .logo img {
+	max-width: 100%;
+	max-height: 100%;
+	margin: auto;
+	display: block;
+}
+
+.register .form-box {
+	width: 340px;
+	height: fit-content;
+	margin-top: 20px;
+	padding: 20px;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	overflow: hidden;
+	flex: 0 1 auto;
+	margin-bottom: 40px;
+}
+
+.register .form-box .response-container {
+	width: 100%;
+	font-size: 12px;
+	line-height: 1.5;
+	padding: 14px 14px;
+	margin-bottom: 8px;
+	border-radius: 4px;
+	display: none;
+}
+
+.register .form-box .head {
+	font-weight: 400;
+	font-size: 28px;
+	line-height: 1.2;
+	margin-bottom: 15px;
+}
+
+.register .form-box .first-name-box,
+.register .form-box .last-name-box,
+.register .form-box .email-box,
+.register .form-box .phone-box,
+.register .form-box .password-box,
+.register .form-box .confirm-password-box {
+	margin-bottom: 15px;
+	width: 300px;
+}
+
+.register .form-box label {
+	margin-inline-start: 2px;
+	font-weight: 500;
+	font-size: 12px;
+}
+
+.register .form-box input {
+	width: 100%;
+	height: 31px;
+	padding: 3px 7px;
+	overflow: hidden;
+	outline: none;
+	border-radius: 4px;
+	border: 1px solid rgb(139, 139, 139);
+	background-color: #fff;
+	font-size: 12px;
+}
+
+.register .form-box input::placeholder {
+	font-size: 12px;
+}
+
+.register .form-box input:focus {
+	border: 2px solid var(--theme-color);
+	box-shadow: 0 0 10px 1px var(--theme-color-light);
+}
+
+.register .form-box .phone-box {
+	position: relative;
+}
+
+.register .form-box .phone-box input {
+	padding-inline-start: 63px;
+}
+
+.register .form-box .phone-box .country-code {
+	display: flex;
+	align-items: center;
+	width: 60px;
+	height: 31px;
+	position: absolute;
+	top: 18px;
+	inset-inline-start: 6px;
+	overflow: hidden;
+}
+
+.register .form-box .phone-box .country-code * {
+	width: 100%;
+	font-size: 12px;
+	background-color: transparent;
+	color: var(--blue-color);
+}
+
+.register .form-box .phone-box .country-code span {
+	cursor: pointer;
+}
+
+.register .form-box .phone-box .country-code select {
+	cursor: pointer;
+	border: none;
+	appearance: none;
+	opacity: 0.001;
+	margin-inline-start: -100%;
+}
+
+.register .form-box .submit-btn button {
+	width: 100%;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	margin-top: 10px;
+	margin-bottom: 20px;
+	background: linear-gradient(to bottom, #f7dfa5, #f0c14b);
+	color: #000;
+	font-size: 14px;
+	border: 1px solid rgb(133, 133, 133);
+	border-radius: 4px;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+.register .form-box .privacy-box {
+	font-size: 12px;
+	line-height: 17px;
+	margin-bottom: 20px;
+	line-height: 20px;
+}
+
+.register .form-box .already-member {
+	margin-top: 10px;
+	font-size: 12px;
+}
+
+/* xxl screens */
+@media (min-height: 720px) {
+
+	.login {
+		height: 100vh;
+	}
+}

@@ -1,0 +1,33 @@
+@keyframes fade {
+	from {
+		opacity: 0.4
+	}
+
+	to {
+		opacity: 1
+	}
+}
+
+@keyframes slide {
+	0% {
+		inset-inline-start: -1500px;
+	}
+
+	50% {
+		inset-inline-end: 0px;
+	}
+
+	100% {
+		inset-inline-end: 1500px;
+	}
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}

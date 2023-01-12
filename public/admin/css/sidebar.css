@@ -1,0 +1,42 @@
+.sidebar {
+  width: 200px;
+  height: 100vh;
+  background-color: #232f3e;
+  position: fixed;
+  top: 60px;
+  inset-inline-start: 0;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+.sidebar ul li{
+  border-bottom: 1px solid #8686869c;
+}
+
+.sidebar ul li:hover{
+  background-color: #dadada38;
+  
+}
+
+.sidebar ul li a{
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+  padding-block: 14px;
+  padding-inline-start: 10px;
+  padding-inline-end: 40px;
+}
+
+.sidebar ul li a span{
+  margin-inline-start: 6px;
+}
+
+.sidebar ul .active{
+  background-color: var(--blue-color);
+}

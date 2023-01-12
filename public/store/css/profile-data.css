@@ -1,0 +1,157 @@
+.profile-sub-page {
+  padding-inline: 20%;
+  padding-block: 30px;
+  min-height: 100vh;
+}
+
+.breadcrumb {
+  margin-bottom: 30px;
+}
+
+.breadcrumb ol {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-flow: row nowrap;
+  font-size: 14px;
+  align-items: center;
+}
+
+.breadcrumb ol li {
+  margin-inline: 6px;
+}
+
+.breadcrumb ol li:first-child {
+  margin-inline-start: 0px;
+}
+
+.breadcrumb ol i {
+  font-size: 10px;
+}
+
+.response-container {
+  width: fit-content;
+  font-size: 14px;
+  line-height: 1.5;
+  padding: 8px 20px;
+  border-radius: 6px;
+  display: none;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.data-table {
+  border: #c0c0c0 1px solid;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.data-table .table-row {
+  padding-inline: 12px;
+  padding-block: 20px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.data-table .table-row:not(:last-child) {
+  border-bottom: #c0c0c0 1px solid;
+}
+
+.data-table .table-row h5 {
+  margin: 0px;
+}
+
+.data-table .table-row span {
+  font-size: 12px;
+}
+
+.data-table .table-row button {
+  padding-inline: 34px;
+  padding-block: 6px;
+  font-size: 12px;
+}
+
+.form-box {
+  border: #c0c0c0 1px solid;
+  border-radius: 6px;
+  padding: 20px;
+}
+
+.form-box .form-info{
+  display: block;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.form-box label {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.form-box input {
+  margin-bottom: 18px;
+  padding: 3px 7px;
+  overflow: hidden;
+  outline: none;
+  border-radius: 4px;
+  border: 1px solid rgb(139, 139, 139);
+}
+
+.form-box input:focus {
+  border: 2px solid var(--theme-color);
+  box-shadow: 0 0 10px 1px var(--theme-color-light);
+}
+
+.form-box button {
+  background-color: var(--theme-color-light);
+  margin-top: 20px;
+  outline: none;
+  border-radius: 4px;
+  border: 1px solid rgb(139, 139, 139);
+  font-size: 12px;
+  padding-inline: 16px;
+  padding-block: 6px;
+}
+
+.form-box .phone-box {
+	position: relative;
+}
+
+.form-box .phone-box input {
+	padding-inline-start: 63px;
+}
+
+.form-box .phone-box .country-code {
+	display: flex;
+	align-items: center;
+	width: 60px;
+	height: 31px;
+	position: absolute;
+	top: 16px;
+	inset-inline-start: 6px;
+	overflow: hidden;
+}
+
+.form-box .phone-box .country-code * {
+	width: 100%;
+	font-size: 12px;
+	background-color: transparent;
+	color: var(--blue-color);
+}
+
+.form-box .phone-box .country-code span {
+	cursor: pointer;
+}
+
+.form-box .phone-box .country-code select {
+	cursor: pointer;
+	border: none;
+	appearance: none;
+	opacity: 0.001;
+	margin-inline-start: -100%;
+}

@@ -1,0 +1,228 @@
+.nav {
+  position: fixed;
+  width: 100%;
+  height: 60px;
+  background-color: #131921;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  top: 0;
+}
+
+.nav i {
+  color: #ffffff;
+}
+
+/*********************** start main nav ******************************/
+.nav .main-nav {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav .main-nav .main-nav-start {
+  height: 100%;
+  width: fit-content;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  direction: ltr;
+}
+
+.nav .main-nav .main-nav-start .logo {
+  height: 20px;
+  cursor: pointer;
+  margin-inline-end: 8px;
+}
+
+.nav .main-nav .main-nav-start .logo img {
+  height: 100%;
+}
+
+.nav .main-nav .main-nav-start .title a {
+  height: 20px;
+  color: var(--theme-color);
+  font-weight: 700;
+  font-size: 20px;
+  text-decoration: none;
+
+}
+
+.nav .main-nav .main-nav-end {
+  width: fit-content;
+  height: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: end;
+  align-items: center;
+}
+
+.nav .main-nav .main-nav-end .settings-box,
+.nav .main-nav .main-nav-end .account-box {
+  cursor: pointer;
+  position: relative;
+  padding-inline: 20px;
+  padding-block: 10px;
+}
+
+.nav .main-nav .main-nav-end .settings-box .settings-label {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.nav .main-nav .main-nav-end .settings-box .settings-dropdown {
+  display: none;
+  cursor: default;
+  position: absolute;
+  background-color: #ffffff;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: var(--popup-menu-z-index);
+  top: 40px;
+  inset-inline-end: 2px;
+}
+
+.nav .main-nav .main-nav-end .settings-box .settings-dropdown::before {
+  content: '';
+  position: absolute;
+  border-width: 8px;
+  border-style: solid;
+  border-color: transparent transparent #f1f1f1 transparent;
+  top: -16px;
+  inset-inline-end: 20px;
+}
+
+
+.nav .main-nav .main-nav-end .settings-box .settings-dropdown div {
+  background-color: #ffffff;
+  cursor: pointer;
+  width: 100%;
+  padding: 10px;
+}
+
+.nav .main-nav .main-nav-end .settings-box .settings-dropdown input {
+  cursor: pointer;
+  display: inline-block;
+  margin-inline-end: 6px;
+}
+
+.nav .main-nav .main-nav-end .settings-box .settings-dropdown label {
+  cursor: pointer;
+}
+
+.nav .main-nav .main-nav-end .settings-box .settings-dropdown div:hover {
+  background-color: #ddd;
+}
+
+.nav .main-nav .main-nav-end .settings-box:hover .settings-dropdown {
+  display: block;
+}
+
+.nav .main-nav .main-nav-end .account-box .account-dropdown {
+  display: none;
+  cursor: default;
+  position: absolute;
+  background-color: #ffffff;
+  min-width: 160px;
+  padding: 20px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: var(--popup-menu-z-index);
+  top: 40px;
+  inset-inline-end: 10px;
+}
+
+.nav .main-nav .main-nav-end .account-box .account-dropdown::before {
+  content: '';
+  position: absolute;
+  border-width: 8px;
+  border-style: solid;
+  border-color: transparent transparent #f1f1f1 transparent;
+  top: -16px;
+  inset-inline-end: 10px;
+}
+
+.nav .main-nav .main-nav-end .account-box .account-dropdown span {
+  display: block;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.nav .main-nav .main-nav-end .account-box .account-dropdown a button {
+  background-color: var(--theme-color-light);
+  border: none;
+  width: 200px;
+  font-size: 10px;
+  padding: 6px;
+  margin-top: 10px;
+}
+
+.nav .main-nav .main-nav-end .account-box:hover .account-dropdown {
+  display: block;
+}
+
+/* mobile */
+@media (max-width: 767px) {
+
+
+  .nav .main-nav {
+    height: 44px;
+    padding-bottom: 4px;
+  }
+
+  .nav .main-nav i {
+    font-size: 14px;
+  }
+
+  .nav .main-nav .main-nav-start {
+    width: 62px;
+    height: 30px;
+    margin-inline-start: 25px;
+  }
+
+  .nav .main-nav .main-nav-start .logo {
+    width: 100%;
+  }
+
+  .nav .main-nav .main-nav-end {
+    width: 100px;
+    height: 30px;
+  }
+
+  .nav .main-nav .main-nav-end .settings-box .settings-label {
+    font-size: 14px;
+  }
+}
+
+/* tablets */
+@media (min-width: 768px) and (max-width: 990px) {
+
+  .nav .main-nav {
+    height: 56px;
+  }
+
+  .nav .main-nav .main-nav-start {
+    width: 22%;
+    height: 36px;
+  }
+
+  .nav .main-nav .main-nav-end {
+    width: 17%;
+    height: 36px;
+  }
+
+  .nav .main-nav .main-nav-end div {
+    width: 25%;
+    height: 36px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+  }
+
+  .nav .main-nav .main-nav-end .settings-box .settings-label {
+    font-size: 16px;
+  }
+
+}

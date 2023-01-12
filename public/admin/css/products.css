@@ -1,0 +1,296 @@
+.products-page {
+  min-height: 100vh;
+  margin-top: 60px;
+  margin-inline-start: 200px;
+  padding-inline: 20px;
+  padding-block: 10px;
+}
+
+.products-page .search-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.products-page .search-container input {
+  width: 250px;
+  padding-inline: 8px 14px;
+  padding-block: 5px;
+  font-size: 12px;
+}
+
+.products-page .search-container button {
+  padding-inline: 14px;
+  padding-block: 5px;
+  font-size: 12px;
+}
+
+.products-page .add-product-button-container {
+  text-align: end;
+  margin-bottom: 20px;
+}
+
+.products-page .add-product-button-container button {
+  background-color: var(--blue-color);
+  color: white;
+  border: none;
+  padding-inline: 12px;
+  padding-block: 8px;
+  font-size: 12px;
+}
+
+.products-page .response-container {
+  width: fit-content;
+  font-size: 14px;
+  line-height: 1.5;
+  padding: 8px 20px;
+  border-radius: 4px;
+  display: none;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+.products-page .empty {
+  text-align: center;
+  font-size: 18px;
+  margin-top: 10%;
+}
+
+.products-page table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px #ddd solid;
+}
+
+.products-page table th,
+.products-page table tr,
+.products-page table td {
+  border: 1px #232f3e solid;
+  padding: 6px;
+}
+
+.products-page table tr td:last-child {
+  width: 135px;
+}
+
+.products-page table th {
+  text-align: start;
+  background-color: #232f3e;
+  color: white;
+}
+
+.products-page table tr {
+  font-size: 14px;
+}
+
+.products-page table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.products-page table tr:hover {
+  background-color: #ddd;
+}
+
+.products-page table td button {
+  border: none;
+  border-radius: 4px;
+  padding: 4px 6px;
+  margin-inline: 6px;
+  background-color: transparent;
+}
+
+.products-page table td button:first-child {
+  color: var(--blue-color);
+}
+
+.products-page table td button:nth-child(2) .fa-ban {
+  color: red;
+}
+
+.products-page table td button:nth-child(2) .fa-circle-check {
+  color: rgb(12, 143, 0);
+}
+
+.products-page table td button:last-child {
+  color: rgb(202, 0, 0);
+}
+
+.products-page .pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.products-page .pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color .3s;
+}
+
+.products-page .pagination a.active {
+  background-color: var(--grey-color);
+  color: white;
+}
+
+.products-page .pagination a:hover:not(.active) {
+  background-color: #ddd;
+}
+
+.edit-product-model-container,
+.add-product-model-container {
+  position: absolute;
+  width: 100%;
+  inset-inline-start: 0px;
+  top: 0px;
+  text-align: start;
+  display: flex;
+  justify-content: center;
+}
+
+.edit-product,
+.add-product {
+  background-color: rgb(247, 247, 247);
+  position: absolute;
+  z-index: var(--model-z-index);
+  padding-inline: 10px;
+  padding-block: 20px;
+  top: 70px;
+  width: 500px;
+}
+
+.edit-product .header,
+.add-product .header {
+  color: var(--light-grey-color);
+  font-size: 16px;
+  margin-inline-start: 8px;
+  margin-bottom: 30px;
+}
+
+.edit-product .response-container,
+.add-product .response-container {
+  width: calc(100% - 40px);
+  font-size: 14px;
+  line-height: 1.5;
+  padding: 8px 10px;
+  border-radius: 4px;
+  display: none;
+  margin-inline: 20px;
+  margin-bottom: 20px;
+}
+
+.edit-product label,
+.add-product label {
+  display: block;
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
+.edit-product input,
+.add-product input,
+.add-product textarea {
+  border: 1px rgb(201, 201, 201) solid;
+  width: 200px;
+  font-size: 14px;
+  padding: 4px;
+}
+
+.edit-product select,
+.add-product select {
+  background-color: white;
+  border: 1px rgb(201, 201, 201) solid;
+  width: 200px;
+  font-size: 13px;
+  padding: 4px;
+}
+
+.edit-product button,
+.add-product button {
+  border: 1px rgb(201, 201, 201) solid;
+  color: white;
+  width: 200px;
+  font-size: 12px;
+  padding-block: 8px;
+}
+
+.edit-product .form-box .price-available-box,
+.edit-product .form-box .category-status-box,
+.edit-product .form-box .actions-box,
+.add-product .form-box .price-available-box,
+.add-product .form-box .category-status-box,
+.add-product .form-box .actions-box {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.edit-product .form-box .name-box,
+.edit-product .form-box .description-box,
+.edit-product .form-box .images-box,
+.add-product .form-box .name-box,
+.add-product .form-box .description-box,
+.add-product .form-box .images-box {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.edit-product .form-box .name-box input,
+.edit-product .form-box .description-box textarea,
+.add-product .form-box .name-box input,
+.add-product .form-box .description-box textarea {
+  width: 300px;
+}
+
+.edit-product .form-box .name-box,
+.edit-product .form-box .description-box,
+.edit-product .form-box .images-box,
+.edit-product .form-box .price-available-box div,
+.edit-product .form-box .category-status-box div,
+.edit-product .form-box .actions-box button,
+.add-product .form-box .name-box,
+.add-product .form-box .description-box,
+.add-product .form-box .images-box,
+.add-product .form-box .price-available-box div,
+.add-product .form-box .category-status-box div,
+.add-product .form-box .actions-box button {
+  margin-inline: 20px;
+}
+
+.edit-product .form-box .image-box .image input,
+.add-product .form-box .images-box input {
+  font-size: 8px;
+  background: white;
+}
+
+.edit-product .form-box .image-container,
+.add-product .form-box .image-container {
+  text-align: center;
+  overflow: hidden;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.edit-product .form-box .image-container img,
+.add-product .form-box .image-container img {
+  width: 6%;
+  margin-inline: 6px;
+}
+
+.edit-product .form-box .actions-box,
+.add-product .form-box .actions-box {
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.edit-product .form-box .actions-box button:first-child,
+.add-product .form-box .actions-box button:first-child {
+  background-color: rgb(0, 81, 255);
+}
+
+.edit-product .form-box .actions-box button:last-child,
+.add-product .form-box .actions-box button:last-child {
+  background-color: rgb(182, 0, 0);
+}

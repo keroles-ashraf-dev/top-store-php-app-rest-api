@@ -1,0 +1,29 @@
+body .screen-cover {
+  display: none;
+  position: fixed;
+  top: 0;
+  inset-inline-start: 0;
+  height: 100%;
+  width: 100%;
+  z-index: var(--screen-cover-z-index);
+  background-color: #00000093;
+}
+
+body .show {
+  display: block;
+}
+
+body .content-cover {
+  display: none;
+  position: fixed;
+  top: 60px;
+  inset-inline-start: 0;
+  height: 100%;
+  width: 100%;
+  z-index: var(--screen-cover-z-index);
+  background-color: #00000093;
+}
+
+body .show {
+  display: block;
+}

@@ -1,0 +1,131 @@
+.center-page {
+  padding-inline: 20%;
+  padding-block: 30px;
+  min-height: 100vh;
+}
+
+.breadcrumb {
+  margin-bottom: 10px;
+}
+
+.breadcrumb ol {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-flow: row nowrap;
+  font-size: 14px;
+  align-items: center;
+}
+
+.breadcrumb ol li {
+  margin-inline: 6px;
+}
+
+.breadcrumb ol li:first-child {
+  margin-inline-start: 0px;
+}
+
+.breadcrumb ol i {
+  font-size: 10px;
+}
+
+.response-container {
+  width: fit-content;
+  font-size: 14px;
+  line-height: 1.5;
+  padding: 8px 20px;
+  border-radius: 6px;
+  display: none;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.orders {
+  display: flex;
+  flex-flow: column nowrap;
+  margin-block: 30px;
+  min-height: 100vh;
+}
+
+.orders .content {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
+}
+
+.orders .content .card {
+  display: flex;
+  flex-flow: column nowrap;
+  border: #c0c0c0 1px solid;
+  border-radius: 6px;
+  width: 100%;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.orders .content .card .order-data{
+  background-color: #F0F2F2;
+  color: #565959;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.orders .content .card .order-data .data{
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  height: 60px;
+  padding-inline: 10px;
+}
+
+.orders .content .card .order-data .data .col{
+  display: flex;
+  flex-flow: column nowrap;
+  margin-inline-end: 14px;
+  font-size: 12px;
+}
+
+.orders .content .card .order-data .data .col span:first-child{
+  padding-bottom: 2px;
+}
+
+.orders .content .card .order-data .actions{
+  margin-inline-end: 10px;
+}
+
+.orders .content .card .item{
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  padding: 10px;
+  font-size: 12px;
+}
+
+.orders .content .card .item .item-data{
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.orders .content .card .item .item-data span{
+  margin-bottom: 2px;
+}
+.orders .content .card .img-container {
+  align-self: center;
+  width: 64px;
+  margin-inline-end: 6px;
+}
+
+.orders .content .card .img-container img{
+  width: 100%;
+}
+
+.orders .content .card .actions button {
+  border: none;
+  background-color: transparent;
+  color: var(--blue-color);
+  font-size: 12px;
+  font-weight: bold;
+}

@@ -1,0 +1,231 @@
+.languages-page {
+  min-height: 100vh;
+  margin-top: 60px;
+  margin-inline-start: 200px;
+  padding-inline: 20px;
+  padding-block: 10px;
+}
+
+.languages-page .add-language-button-container {
+  text-align: end;
+  margin-bottom: 20px;
+}
+
+.languages-page .add-language-button-container button {
+  background-color: var(--blue-color);
+  color: white;
+  border: none;
+  padding-inline: 12px;
+  padding-block: 8px;
+  font-size: 12px;
+}
+
+.languages-page .response-container {
+  width: fit-content;
+  font-size: 14px;
+  line-height: 1.5;
+  padding: 8px 20px;
+  border-radius: 4px;
+  display: none;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+.languages-page .empty {
+  text-align: center;
+  font-size: 18px;
+  margin-top: 10%;
+}
+
+.languages-page table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px #ddd solid;
+}
+
+.languages-page table th,
+.languages-page table tr,
+.languages-page table td {
+  border: 1px #232f3e solid;
+  padding: 6px;
+}
+
+.languages-page table tr td:last-child {
+  width: 135px;
+}
+
+.languages-page table th {
+  text-align: start;
+  background-color: #232f3e;
+  color: white;
+}
+
+.languages-page table tr {
+  font-size: 14px;
+}
+
+.languages-page table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.languages-page table tr:hover {
+  background-color: #ddd;
+}
+
+.languages-page table td button {
+  border: none;
+  border-radius: 4px;
+  padding: 4px 6px;
+  margin-inline: 6px;
+  background-color: transparent;
+}
+
+.languages-page table td button:first-child {
+  color: var(--blue-color);
+}
+
+.languages-page table td button:nth-child(2) .fa-ban {
+  color: red;
+}
+
+.languages-page table td button:nth-child(2) .fa-circle-check {
+  color: rgb(12, 143, 0);
+}
+
+.languages-page table td button:last-child {
+  color: rgb(202, 0, 0);
+}
+
+.model-container {
+  position: absolute;
+  width: 100%;
+  inset-inline-start: 0px;
+  top: 0px;
+  text-align: start;
+  display: flex;
+  justify-content: center;
+}
+
+.edit-language,
+.add-language {
+  background-color: rgb(247, 247, 247);
+  position: absolute;
+  z-index: var(--model-z-index);
+  padding-inline: 10px;
+  padding-block: 20px;
+  top: 70px;
+  width: 500px;
+}
+
+.edit-language .header,
+.add-language .header {
+  color: var(--light-grey-color);
+  font-size: 16px;
+  margin-inline-start: 8px;
+  margin-bottom: 30px;
+}
+
+.edit-language .response-container,
+.add-language .response-container {
+  width: calc(100% - 40px);
+  font-size: 14px;
+  line-height: 1.5;
+  padding: 8px 10px;
+  border-radius: 4px;
+  display: none;
+  margin-inline: 20px;
+  margin-bottom: 20px;
+}
+
+.edit-language label,
+.add-language label {
+  display: block;
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
+.edit-language input,
+.add-language input {
+  border: 1px rgb(201, 201, 201) solid;
+  width: 200px;
+  font-size: 14px;
+  padding: 4px;
+}
+
+.edit-language select,
+.add-language select {
+  background-color: white;
+  border: 1px rgb(201, 201, 201) solid;
+  width: 200px;
+  font-size: 13px;
+  padding: 4px;
+}
+
+.edit-language button,
+.add-language button {
+  border: 1px rgb(201, 201, 201) solid;
+  color: white;
+  width: 200px;
+  font-size: 12px;
+  padding-block: 8px;
+}
+
+.edit-language .form-box .name-code-box,
+.edit-language .form-box .status-file-box,
+.edit-language .form-box .actions-box,
+.add-language .form-box .name-code-box,
+.add-language .form-box .status-file-box,
+.add-language .form-box .actions-box {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.edit-language .form-box .download-box {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.edit-language .form-box .download-box button {
+  border: none;
+  background-color: transparent;
+}
+
+.edit-language .form-box .download-box button i {
+  color: #00c800;
+  font-size: 30px;
+}
+
+.edit-language .form-box .name-code-box div,
+.edit-language .form-box .status-file-box div,
+.edit-language .form-box .actions-box button,
+.add-language .form-box .name-code-box div,
+.add-language .form-box .status-file-box div,
+.add-language .form-box .actions-box button {
+  margin-inline: 20px;
+}
+
+.edit-language .form-box .status-file-box .file input,
+.add-language .form-box .status-file-box .file input {
+  font-size: 8px;
+  background: white;
+}
+
+.edit-language .form-box .actions-box,
+.add-language .form-box .actions-box {
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.edit-language .form-box .actions-box button:first-child,
+.add-language .form-box .actions-box button:first-child {
+  background-color: rgb(0, 81, 255);
+}
+
+.edit-language .form-box .actions-box button:last-child,
+.add-language .form-box .actions-box button:last-child {
+  background-color: rgb(182, 0, 0);
+}

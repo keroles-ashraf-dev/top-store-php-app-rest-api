@@ -1,0 +1,22 @@
+{
+	"dir": "ltr",
+	"deliverTo": "Deliver To",
+	"signIn": "Sign-In",
+	"signOut": "Sign-Out",
+	"emailOrPhoneNumber": "Email or phone number",
+	"password": "Password",
+	"continue": "Continue",
+	"keepMeSignedIn": "Keep me signed in",
+	"loginPrivacyHint": "By continuing, you agree to ",
+	"conditionsOfUse": "Conditions Of Use",
+	"privacyNotice": "Privacy Notice",
+	"ForgetYourPassword": "Forget your password?",
+	"OtherIssuesWithSignIn": "Other issues with Sign-In?",
+	"newToAmazon": "New?",
+	"CreateYourAccount": "Create your account",
+	"needHelp?": "Need help?",
+	"help": "Help",
+	"and": "and",
+	"search": "Search...",
+	"todayDeals": "Today's Deals"
+}

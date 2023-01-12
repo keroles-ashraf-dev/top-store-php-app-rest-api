@@ -1,0 +1,223 @@
+.users-page {
+  min-height: 100vh;
+  margin-top: 60px;
+  margin-inline-start: 200px;
+  padding-inline: 20px;
+  padding-block: 10px;
+}
+
+.users-page .search-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.users-page .search-container input {
+  width: 200px;
+  padding-inline: 8px 14px;
+  padding-block: 5px;
+  font-size: 12px;
+}
+
+.users-page .search-container button {
+  padding-inline: 14px;
+  padding-block: 5px;
+  font-size: 12px;
+}
+
+.users-page .response-container {
+  width: fit-content;
+  font-size: 14px;
+  line-height: 1.5;
+  padding: 8px 20px;
+  border-radius: 4px;
+  display: none;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+.users-page .empty {
+  text-align: center;
+  font-size: 18px;
+  margin-top: 10%;
+}
+
+.users-page table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px #ddd solid;
+}
+
+.users-page table th,
+.users-page table tr,
+.users-page table td {
+  border: 1px #232f3e solid;
+  padding: 6px;
+}
+
+.users-page table tr td:last-child {
+  width: 136px;
+}
+
+.users-page table th {
+  text-align: start;
+  background-color: #232f3e;
+  color: white;
+}
+
+.users-page table tr {
+  font-size: 14px;
+}
+
+.users-page table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.users-page table tr:hover {
+  background-color: #ddd;
+}
+
+.users-page table td button {
+  border: none;
+  border-radius: 4px;
+  padding: 4px 6px;
+  margin-inline: 6px;
+  background-color: transparent;
+}
+
+.users-page table td button:first-child {
+  color: rgb(0, 119, 255);
+}
+
+.users-page table td button:nth-child(2) .fa-user-slash {
+  color: red;
+}
+
+.users-page table td button:nth-child(2) .fa-user {
+  color: rgb(12, 143, 0);
+  padding-inline-start: 4px;
+}
+
+.users-page table td button:last-child {
+  color: rgb(202, 0, 0);
+}
+
+.users-page .pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.users-page .pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color .3s;
+}
+
+.users-page .pagination a.active {
+  background-color: var(--grey-color);
+  color: white;
+}
+
+.users-page .pagination a:hover:not(.active) {
+  background-color: #ddd;
+}
+
+.edit-user-model-container {
+  position: absolute;
+  width: 100%;
+  inset-inline-start: 0px;
+  top: 0px;
+  text-align: -moz-left;
+  display: flex;
+  justify-content: center;
+}
+
+.edit-user {
+  background-color: rgb(247, 247, 247);
+  position: absolute;
+  z-index: var(--model-z-index);
+  padding-inline: 10px;
+  padding-block: 20px;
+  top: 70px;
+}
+
+.edit-user .header {
+  color: var(--light-grey-color);
+  font-size: 16px;
+  margin-inline-start: 8px;
+  margin-bottom: 30px;
+}
+
+.edit-user .response-container {
+  width: calc(100% - 40px);
+  font-size: 14px;
+  line-height: 1.5;
+  padding: 8px 10px;
+  border-radius: 4px;
+  display: none;
+  margin-inline: 20px;
+  margin-bottom: 20px;
+}
+
+.edit-user label {
+  display: block;
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
+.edit-user input {
+  border: 1px rgb(201, 201, 201) solid;
+  width: 200px;
+  font-size: 14px;
+  padding: 4px;
+}
+
+.edit-user select {
+  background-color: white;
+  border: 1px rgb(201, 201, 201) solid;
+  width: 200px;
+  font-size: 13px;
+  padding: 4px;
+}
+
+.edit-user button {
+  border: 1px rgb(201, 201, 201) solid;
+  color: white;
+  width: 200px;
+  font-size: 12px;
+  padding-block: 8px;
+}
+
+.edit-user .form-box .name-box,
+.edit-user .form-box .communication-box,
+.edit-user .form-box .role-status-box,
+.edit-user .form-box .password-box,
+.edit-user .form-box .actions-box {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.edit-user .form-box .name-box div,
+.edit-user .form-box .communication-box div,
+.edit-user .form-box .role-status-box div,
+.edit-user .form-box .password-box div,
+.edit-user .form-box .actions-box button {
+  margin-inline: 20px;
+}
+
+.edit-user .form-box .actions-box {
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.edit-user .form-box .actions-box button:first-child {
+  background-color: rgb(0, 81, 255);
+}
+
+.edit-user .form-box .actions-box button:last-child {
+  background-color: rgb(182, 0, 0);
+}

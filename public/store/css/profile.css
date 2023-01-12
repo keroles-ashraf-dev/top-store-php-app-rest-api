@@ -1,0 +1,64 @@
+.profile {
+  display: flex;
+  flex-flow: column wrap;
+  margin-block: 30px;
+  min-height: 100vh;
+}
+
+.profile h2 {
+  padding-inline-start: 12%;
+}
+
+.profile .content {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  padding-inline: 12%;
+}
+
+.profile .content .card {
+  display: flex;
+  flex-flow: row nowrap;
+  border: #c0c0c0 1px solid;
+  border-radius: 6px;
+  width: 31%;
+  height: 90px;
+  padding: 12px;
+  margin-inline: 10px;
+  margin-block: 10px;
+}
+
+.profile .content .card a {
+  display: flex;
+  flex-flow: row nowrap;
+  color: unset;
+}
+
+.profile .content .card .img-container {
+  width: 65px;
+  height: 65px;
+  overflow: hidden;
+  margin-inline-end: 4px;
+}
+
+.profile .content .card .img-container img {
+  width: 100%;
+  height: 100%;
+}
+
+.profile .content .card .txt-container {
+  display: flex;
+  flex-flow: column wrap;
+  margin-block: auto;
+}
+
+.profile .content .card .txt-container h3 {
+  margin: 0px;
+  margin-bottom: 8px;
+  font-weight: normal;
+}
+
+.profile .content .card .txt-container span {
+  font-size: 12px;
+  color: rgb(116, 116, 116);
+}
