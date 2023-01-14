@@ -23,17 +23,6 @@
         </div>
       </a>
     </div>
-    <!-- <div class="card payments">
-      <a href="<?php echo url('/profile/payments') ?>">
-        <div class="img-container">
-          <img src="<?php echo assets('/common/images/payments-card-img.png') ?>" alt="">
-        </div>
-        <div class="txt-container">
-          <h3 data-translationKey="yourPayments">Your Payments</h3>
-          <span data-translationKey="yourPaymentsHint">Manage payment methods and settings</span>
-        </div>
-      </a>
-    </div> -->
     <div class="card addresses">
       <a href="<?php echo url('/profile/addresses') ?>">
         <div class="img-container">

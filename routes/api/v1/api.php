@@ -6,6 +6,9 @@ $app->route->add('/api/v1/login', 'Api/V1/Auth/Login', 'POST');
 $app->route->add('/api/v1/verify-email', 'Api/V1/Auth/EmailVerifying', 'GET');
 $app->route->add('/api/v1/resend-otp', 'Api/V1/Auth/EmailVerifying@resendOTP', 'POST');
 
+// products
+$app->route->add('/api/v1/category-products', 'Api/V1/Categories@getCategoryProducts', 'GET');
+
 // deals
 $app->route->add('/api/v1/deals', 'Api/V1/Deals', 'GET');
 $app->route->add('/api/v1/deal', 'Api/V1/Deals@getDeal', 'GET');

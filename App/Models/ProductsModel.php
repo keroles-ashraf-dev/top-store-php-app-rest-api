@@ -130,16 +130,16 @@ class ProductsModel extends Model
 		// Set our offset
 		$offset = $limit * ($currentPage - 1);
 
-		
+
 		if (empty($categoryId) || $categoryId == 'null') {
 			$result = $this->select('COUNT(id) AS `total`')
-					->from($this->table)
-					->where('status = ? AND name LIKE ' . "'%$keyword%'", 1)
-					->fetchAll();
+				->from($this->table)
+				->where('status = ? AND name LIKE ' . "'%$keyword%'", 1)
+				->fetchAll();
 
-					//set total items
-					$this->pagination->setTotalItems($result[0]->total);
-					
+			//set total items
+			$this->pagination->setTotalItems($result[0]->total);
+
 			$products = $this->select('p.id, p.price, d.price discounted_price, p.name, p.available_count, p.rating, p.raters_count, pi.name image')
 				->from($this->table . ' p')
 				->join('LEFT JOIN products_images pi ON pi.name = (SELECT pi.name FROM products_images pi WHERE pi.product_id = p.id LIMIT 1)')
@@ -150,9 +150,9 @@ class ProductsModel extends Model
 				->fetchAll();
 		} else {
 			$result = $this->select('COUNT(id) AS `total`')
-			->from($this->table)
-			->where('category_id = ? AND status = ? AND name LIKE' . "'%$keyword%'", $categoryId, 1)
-			->fetchAll();
+				->from($this->table)
+				->where('category_id = ? AND status = ? AND name LIKE' . "'%$keyword%'", $categoryId, 1)
+				->fetchAll();
 
 			//set total items
 			$this->pagination->setTotalItems($result[0]->total);
@@ -176,19 +176,20 @@ class ProductsModel extends Model
 	 * @var int category id
 	 * @var String order by
 	 * @var String sort by
+	 * @var int? items count
+	 * @var int? last offset
 	 * @return array
 	 */
-	public function paginateCategoryProducts($categoryId, $orderBy, $sortBy)
+	public function paginateCategoryProducts($categoryId, $orderBy, $sortBy, $itemsCount = null, $lastOffset = null)
 	{
-		//pred($orderBy . $s);
 		// We Will get the current page
 		$currentPage = $this->pagination->page();
 		// We Will set the items Per Page
-		$this->pagination->setItemsPerPage(10);
+		$this->pagination->setItemsPerPage($itemsCount ?: 10);
 		// We Will get the items Per Page
 		$limit = $this->pagination->itemsPerPage();
 		// Set our offset
-		$offset = $limit * ($currentPage - 1);
+		$offset = $lastOffset ?: ($limit * ($currentPage - 1));
 		//set total items
 		$this->pagination->setTotalItems($this->count($this->table, 'category_id', $categoryId));
 

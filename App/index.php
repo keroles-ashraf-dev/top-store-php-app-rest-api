@@ -5,8 +5,6 @@ use System\Application;
 $app = Application::getInstance();
 $requestedUrl = $app->request->url(); // requested route url
 
-//include('dummy/run.php'); exit;
-
 if (strpos($requestedUrl, '/api/v1') === 0) {
     // set default headers just in case exception thrown
     $app->api->setHeaders();

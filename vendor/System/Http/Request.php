@@ -59,16 +59,17 @@ class Request
 	public function fileGetContents($key, $default = null, $returnAll = false)
 	{
 		$row = file_get_contents("php://input");
-		$arr = json_decode($row, true);
+		$data = json_decode($row, true);
 
 		if ($returnAll) {
-			return $arr;
+			$data = array_map('trim', $data);
+			return $data;
 		}
 
-		$value = array_get($arr, $key, $default);
+		$value = array_get($data, $key, $default);
 
 		if (is_array($value)) {
-			$value = array_filter($value);
+			$value = array_map('trim', $value);
 		} else {
 			$value = trim($value);
 		}
@@ -88,7 +89,7 @@ class Request
 		$value = array_get($_GET, $key, $default);
 
 		if (is_array($value)) {
-			$value = array_filter($value);
+			$value = array_map('trim', $value);
 		} else {
 			$value = trim($value);
 		}
@@ -108,7 +109,7 @@ class Request
 		// just remove any white space if there is a value
 		$value = array_get($_POST, $key, $default);
 		if (is_array($value)) {
-			$value = array_filter($value);
+			$value = array_map('trim', $value);
 		} else {
 			$value = trim($value);
 		}

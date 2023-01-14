@@ -23,7 +23,7 @@ class Pagination
      *
      * @var int
      */
-    private $itemsPerPage = 30;
+    private $itemsPerPage = 20;
 
     /**
      * Last Page Number => Total Pages

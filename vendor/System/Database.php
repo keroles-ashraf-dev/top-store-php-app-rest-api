@@ -333,7 +333,6 @@ class Database
             $sql .= ' GROUP BY ' . implode(' ', $this->groupBy);
         }
 
-
         return $sql;
     }
 
