@@ -37,6 +37,8 @@ class CartModel extends Model
 				->where('c.user_id = ? AND p.status = ?', $id, 1)
 				->fetchAll();
 
+				if(!$products) $products = [];
+
 			$this->app->share('userCart', $products);
 		}
 

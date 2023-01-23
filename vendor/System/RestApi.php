@@ -114,6 +114,24 @@ class RestApi
   }
 
   /**
+   * forbidden request
+   * 
+   * @param array $data
+   * @return void
+   */
+  function forbidden($data = [])
+  {
+    // unauthorized code
+    http_response_code(403);
+
+    if (!empty($data)) {
+      echo json_encode($data);
+    }
+
+    exit;
+  }
+
+  /**
    * not found resource
    * 
    * @param array $data

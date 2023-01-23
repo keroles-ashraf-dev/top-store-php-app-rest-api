@@ -13,16 +13,23 @@ class CategoriesController extends Controller
      */
     public function index()
     {
-        
+
         $categoryId = $this->request->get('id');
-        
+
         if (!is_numeric($categoryId)) {
             return $this->url->redirectTo('/404');
         }
-        
-        $orderBy = $this->request->get('order-by', 'name');
-        $sortBy = $this->request->get('sort-by', 'ASC');
-        
+
+        $sortBy = $this->request->get('sort-by', 'name');
+        $orderBy = $this->request->get('order-by', 'ASC');
+
+        $sorters = ['name', 'price', 'rating'];
+        $orders = ['ASC', 'DESC'];
+
+        if (!in_array($sortBy, $sorters) || !in_array($orderBy, $orders)) {
+            return $this->url->redirectTo('/404');
+        }
+
         $this->html->setTitle('Category');
 
         $categoriesModel = $this->load->model('Categories');
@@ -31,13 +38,13 @@ class CategoriesController extends Controller
         $data['subCategories'] = $categoriesModel->getSubCategoriesOfCategory($categoryId);
         $data['products'] = $productsModel->paginateCategoryProducts($categoryId, $orderBy, $sortBy);
 
-       // pred($data['products']);
+        // pred($data['products']);
         $data['pagination'] = $this->pagination->paginate();
 
         $data['categoryId'] = $categoryId;
-        
-        $data['orderBy'] = $orderBy;
+
         $data['sortBy'] = $sortBy;
+        $data['orderBy'] = $orderBy;
 
         $view = $this->view->render('store/category/category', $data);
 

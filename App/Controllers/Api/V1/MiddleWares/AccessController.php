@@ -53,6 +53,7 @@ class AccessController extends Controller
         if (empty($token)) {
             $res['success'] = 0;
             $res['message'] = 'Auth token is invalid';
+            $res['data'] = $token;
 
             $this->api->setHeaders()->badRequest($res);
         }
@@ -67,6 +68,40 @@ class AccessController extends Controller
             $res['message'] = 'Auth token is invalid';
 
             $this->api->setHeaders()->unauthorized($res);
+        }
+    }
+
+    /**
+     * Check if request auth token and passed user id has rights to access that content
+     *
+     * @return void
+     */
+    public function hasAccessRights()
+    {
+        $headers = $this->api->getHeaders();
+
+        $token = $headers['authorization'];
+
+        $userId = $this->request->get('user-id') ?: $this->request->fileGetContents('user-id');
+
+        if (!is_numeric($userId)) {
+
+            $res['success'] = 0;
+            $res['message'] = 'User id is invalid';
+
+            $this->api->setHeaders()->badRequest($res);
+        }
+
+        $loginModel = $this->load->model('Login');
+
+        $hasAccessRights = $loginModel->isTokenValidForUserId($token, $userId);
+
+        if (!$hasAccessRights) {
+
+            $res['success'] = 0;
+            $res['message'] = 'You do not have access rights to that content';
+
+            $this->api->setHeaders()->forbidden($res);
         }
     }
 }

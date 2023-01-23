@@ -15,16 +15,16 @@
 		<form action="<?php echo url('/search') ?>" method="GET">
 			<input type="hidden" name="keyword" value="<?php echo $keyword ?>">
 			<input type="hidden" name="category-id" value="<?php echo $categoryId ?>">
-			<span class="title">Order by:</span>
-			<div class="filters">
-				<div><input type="radio" name="order-by" <?php echo ($orderBy == 'name' ? 'checked' : '') ?> value="name"><span>Name</span></div>
-				<div><input type="radio" name="order-by" <?php echo ($orderBy == 'price' ? 'checked' : '') ?> value="price"><span>Price</span></div>
-				<div><input type="radio" name="order-by" <?php echo ($orderBy == 'rating' ? 'checked' : '') ?> value="rating"><span>Rating</span></div>
-			</div>
 			<span class="title">Sort by:</span>
-			<div class="sorters">
-				<div><input type="radio" name="sort-by" <?php echo ($sortBy == 'ASC' ? 'checked' : '') ?> value="ASC"><span>Ascending</span></div>
-				<div><input type="radio" name="sort-by" <?php echo ($sortBy == 'DESC' ? 'checked' : '') ?> value="DESC"><span>Descending</span></div>
+			<div class="filters">
+				<div><input type="radio" name="sort-by" <?php echo ($sortBy == 'name' ? 'checked' : '') ?> value="name"><span>Name</span></div>
+				<div><input type="radio" name="sort-by" <?php echo ($sortBy == 'price' ? 'checked' : '') ?> value="price"><span>Price</span></div>
+				<div><input type="radio" name="sort-by" <?php echo ($sortBy == 'rating' ? 'checked' : '') ?> value="rating"><span>Rating</span></div>
+			</div>
+			<span class="title">Order by:</span>
+			<div class="orders">
+				<div><input type="radio" name="order-by" <?php echo ($orderBy == 'ASC' ? 'checked' : '') ?> value="ASC"><span>Ascending</span></div>
+				<div><input type="radio" name="order-by" <?php echo ($orderBy == 'DESC' ? 'checked' : '') ?> value="DESC"><span>Descending</span></div>
 			</div>
 			<div class="action"><button type="submit">Submit</button></div>
 		</form>
@@ -74,14 +74,14 @@
 	<div class="pagination-container">
 		<?php if ($pagination->totalItems() > $pagination->itemsPerPage()) : ?>
 			<div class="pagination">
-				<a href="<?php echo url('search?keyword=') . $keyword . '&category-id=' . $categoryId . '&order-by=' . $orderBy . '&sort-by=' . $sortBy . '&page=' . $pagination->prev() ?>">&laquo;</a>
+				<a href="<?php echo url('search?keyword=') . $keyword . '&category-id=' . $categoryId . '&sort-by=' . $sortBy . '&order-by=' . $orderBy . '&page=' . $pagination->prev() ?>">&laquo;</a>
 				<?php
 				for ($i = 1; $i <= $pagination->last(); $i++) {
-					$html = '<a ' . ($i == $pagination->page() ? 'class="active"' : '') . ' href="' . url('search?keyword=') . $keyword . '&category-id=' . $categoryId . '&order-by=' . $orderBy . '&sort-by=' . $sortBy . '&page=' . $i . '">' . $i . '</a>';
+					$html = '<a ' . ($i == $pagination->page() ? 'class="active"' : '') . ' href="' . url('search?keyword=') . $keyword . '&category-id=' . $categoryId . '&sort-by=' . $sortBy . '&order-by=' . $orderBy . '&page=' . $i . '">' . $i . '</a>';
 					echo $html;
 				}
 				?>
-				<a href="<?php echo url('search?keyword=') . $keyword . '&category-id=' . $categoryId . '&order-by=' . $orderBy . '&sort-by=' . $sortBy . '&page=' . $pagination->next() ?>">&raquo;</a>
+				<a href="<?php echo url('search?keyword=') . $keyword . '&category-id=' . $categoryId . '&sort-by=' . $sortBy . '&order-by=' . $orderBy . '&page=' . $pagination->next() ?>">&raquo;</a>
 			</div>
 		<?php endif; ?>
 	</div>

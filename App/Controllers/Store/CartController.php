@@ -23,10 +23,11 @@ class CartController extends Controller
         $subtotalPrice = $this->subtotalPrice($products);
         $vatPercent = $settingsModel->get('vat');
         $shipping = $settingsModel->get('shipping');
+        $vat = ($vatPercent * $subtotalPrice) / 100;
 
         $data['products'] = $products;
         $data['subtotalPrice'] = $subtotalPrice;
-        $data['vat'] = ($vatPercent * $subtotalPrice) / 100;
+        $data['vat'] = bcdiv($vat, '1', 2);
         $data['vatPercent'] = $vatPercent;
         $data['shipping'] = $shipping;
 

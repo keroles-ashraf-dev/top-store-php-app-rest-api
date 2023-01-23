@@ -145,7 +145,7 @@ class ProductsModel extends Model
 				->join('LEFT JOIN products_images pi ON pi.name = (SELECT pi.name FROM products_images pi WHERE pi.product_id = p.id LIMIT 1)')
 				->join('LEFT JOIN deals d ON d.product_id = p.id')
 				->where('p.status = ? AND p.name LIKE ' . "'%$keyword%'", 1)
-				->orderBy('p.' . $orderBy, $sortBy)
+				->orderBy('p.' . $sortBy, $orderBy)
 				->limit($limit, $offset)
 				->fetchAll();
 		} else {
@@ -162,7 +162,7 @@ class ProductsModel extends Model
 				->join('LEFT JOIN products_images pi ON pi.name = (SELECT pi.name FROM products_images pi WHERE pi.product_id = p.id LIMIT 1)')
 				->join('LEFT JOIN deals d ON d.product_id = p.id')
 				->where('p.category_id = ? AND p.status = ? AND p.name LIKE' . "'%$keyword%'", $categoryId, 1)
-				->orderBy('p.' . $orderBy, $sortBy)
+				->orderBy('p.' . $sortBy, $orderBy)
 				->limit($limit, $offset)
 				->fetchAll();
 		}
@@ -199,7 +199,7 @@ class ProductsModel extends Model
 			->join('LEFT JOIN products_images pi ON pi.name = (SELECT pi.name FROM products_images pi WHERE pi.product_id = p.id LIMIT 1)')
 			->where('p.category_id = ? AND p.status = ?', $categoryId, 1)
 			->limit($limit, $offset)
-			->orderBy('p.' . $orderBy, $sortBy)
+			->orderBy('p.' . $sortBy, $orderBy)
 			->fetchAll();
 	}
 

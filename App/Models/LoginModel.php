@@ -70,8 +70,13 @@ class LoginModel extends Model
             return false;
         }
 
-        $userId = $this->select('user_id')->where('token=?', $token)->fetch($this->authTokensTable)->user_id;
-        $user = $this->select('*')->where('id=?', $userId)->fetch($this->table);
+        $user = $this->select('user_id')->where('token=?', $token)->fetch($this->authTokensTable);
+
+        if (!$user) {
+            return false;
+        }
+
+        $user = $this->select('*')->where('id=?', $user->user_id)->fetch($this->table);
         $user->token = $token;
 
         if (!$user) {
@@ -102,6 +107,24 @@ class LoginModel extends Model
         }
 
         return true;
+    }
+
+    /**
+     * Determine whether the auth token from rest api request is valid for passed user id
+     * 
+     * @param string $token
+     * @param string $id
+     * @return bool
+     */
+    public function isTokenValidForUserId($userToken, $userId)
+    {
+        $id = $this->select('user_id')->where('token=?', $userToken)->fetch($this->authTokensTable)->user_id;
+
+        if ($id == $userId) {
+            return true;
+        }
+
+        return false;
     }
 
     /**

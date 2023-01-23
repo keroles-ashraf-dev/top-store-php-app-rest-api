@@ -38,19 +38,24 @@ class CategoriesController extends Controller
 
         $categoryId = $this->request->get('category-id');
         $pagination = $this->request->get('pagination');
+        $filter = $this->request->get('filter');
 
         $itemsCount = $pagination['items-count'];
         $offset = $pagination['offset'];
+        $sortBy = $filter['sort-by'];
+        $orderBy = strtoupper($filter['order-by']);
 
-        if (!is_numeric($categoryId) || !is_numeric($itemsCount) || !is_numeric($offset)) {
+        $sorters = ['name', 'price', 'rating'];
+        $orders = ['ASC', 'DESC'];
+
+        if (!is_numeric($categoryId) || !is_numeric($itemsCount) || !is_numeric($offset) 
+            || !in_array($sortBy, $sorters) || !in_array($orderBy, $orders)) {
+
             $res['success'] = 0;
             $res['message'] = 'Some Request params is invalid';
 
             $this->api->setHeaders()->badRequest($res);
         }
-
-        $orderBy = $this->request->get('order-by', 'name');
-        $sortBy = $this->request->get('sort-by', 'ASC');
 
         $productsModel = $this->load->model('Products');
 

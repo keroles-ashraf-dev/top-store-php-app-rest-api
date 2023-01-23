@@ -54,9 +54,25 @@ class Security
    */
   function isAuthTokenNeeded($requestedUrl)
   {
-    $tokenNeededUris = ['/api/v1/user', '/api/v1/address', '/api/v1/addresses'];
+    $tokenNeededUris = ['/api/v1/user', '/api/v1/cart', '/api/v1/address', '/api/v1/addresses'];
 
     foreach ($tokenNeededUris as $uri) {
+      if (str_starts_with($requestedUrl, $uri)) return true;
+    }
+
+    return false;
+  }
+  
+  /**
+   * check if requested rest api route needs access rights
+   * 
+   * @return bool
+   */
+  function isAccessRightsNeeded($requestedUrl)
+  {
+    $rightsNeededUris = ['/api/v1/user/', '/api/v1/cart', '/api/v1/address', '/api/v1/addresses'];
+
+    foreach ($rightsNeededUris as $uri) {
       if (str_starts_with($requestedUrl, $uri)) return true;
     }
 

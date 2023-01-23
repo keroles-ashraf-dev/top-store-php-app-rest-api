@@ -17,12 +17,19 @@ class SearchController extends Controller
         $categoryId = $this->request->get('category-id');
         $keyword = $this->request->get('keyword');
 
-        if (($categoryId != 'null' && !is_numeric($categoryId)) || empty($keyword)) {
+        if (($categoryId != 'null' && !is_numeric($categoryId)) || !preg_match('/^[a-zA-Z0-9 ]*$/', $keyword)) {
             return $this->url->redirectTo('/404');
         }
 
-        $orderBy = $this->request->get('order-by', 'name');
-        $sortBy = $this->request->get('sort-by', 'ASC');
+        $sortBy = $this->request->get('sort-by', 'name');
+        $orderBy = $this->request->get('order-by', 'ASC');
+
+        $sorters = ['name', 'price', 'rating'];
+        $orders = ['ASC', 'DESC'];
+
+        if (!in_array($sortBy, $sorters) || !in_array($orderBy, $orders)) {
+            return $this->url->redirectTo('/404');
+        }
 
         if ($categoryId != null) {
             $categoriesModel = $this->load->model('Categories');

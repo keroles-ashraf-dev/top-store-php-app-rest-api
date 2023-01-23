@@ -15,13 +15,30 @@ if (strpos($requestedUrl, '/api/v1') === 0) {
     });
 
     // check if requested route needs auth token
-    // if so, then add auth token middle ware
+    //if so, then add auth token middle ware
     if ($app->security->isAuthTokenNeeded($requestedUrl)) {
 
         $app->route->addMiddleWare(function ($app) {
             $app->load->action('Api/V1/MiddleWares/Access', 'isValidAuthToken');
         });
     }
+
+    // check if requested route needs access rights
+    // if so, then add access rights middle ware
+    if ($app->security->isAccessRightsNeeded($requestedUrl)) {
+
+        $app->route->addMiddleWare(function ($app) {
+            $app->load->action('Api/V1/MiddleWares/Access', 'hasAccessRights');
+        });
+    }
+
+    // share|load settings for each request
+    $app->share('settings', function ($app) {
+
+        $settingsModel = $app->load->model('Settings');
+        $settingsModel->settings();
+        return $settingsModel;
+    });
 
     // add api routes
     include('routes/api/v1/api.php');
