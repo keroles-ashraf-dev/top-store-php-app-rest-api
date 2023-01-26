@@ -64,7 +64,7 @@
   margin-bottom: 20px;
 }
 
-.home .categories-deals-container .category-card a{
+.home .categories-deals-container .category-card a {
   width: 100%;
   height: 100%;
   display: flex;
@@ -135,8 +135,8 @@
   width: 100%;
 }
 
-.home .today-deals-container .products-row .product-card .name{
-margin-block: 8px;
+.home .today-deals-container .products-row .product-card .name {
+  margin-block: 8px;
 }
 
 .home .today-deals-container .products-row .product-card .discount {
@@ -161,7 +161,7 @@ margin-block: 8px;
   font-size: 12px;
 }
 
-.home .today-deals-container .products-row .product-card .rating-container span:nth-child(2){
+.home .today-deals-container .products-row .product-card .rating-container span:nth-child(2) {
   color: var(--blue-color);
 }
 
@@ -170,7 +170,7 @@ margin-block: 8px;
   .home .slider {
     top: 140px;
   }
-  
+
   .home .slider .prev,
   .home .slider .next {
     top: 4%;
@@ -178,21 +178,25 @@ margin-block: 8px;
   }
 
   .home .categories-deals-container {
-    margin-top: 170px;
+    margin-top: 140px;
   }
 
   .home .categories-deals-container .category-card {
-    width: 200px;
-    height: 220px;
+    width: 170px;
+    height: 200px;
   }
 
   .home .categories-deals-container .category-card img {
-    height: 150px;
+    height: 130px;
   }
 
   .home .today-deals-container .products-row .product-card {
     width: 30%;
     font-size: 10px;
     margin-inline: 60px;
+  }
+
+  .home .today-deals-container .products-row .product-card .img-container {
+    width: 160px;
   }
 }

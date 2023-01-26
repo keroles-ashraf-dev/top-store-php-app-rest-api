@@ -36,7 +36,7 @@ class OrdersModel extends Model
 	{
 		if (!$this->app->isSharing('orders')) {
 
-			$orders = $this->select('o.id, o.created, o.total, o.status, o.payment_type, oi.count, oi.price, p.id product_id, p.name, pi.name image')
+			$orders = $this->select('o.id, o.created, o.total, o.status, o.payment_type, o.payment_status, oi.count, oi.price, p.id product_id, p.name, pi.name image')
 				->from($this->table . ' o')
 				->join('LEFT JOIN order_items oi ON o.id = oi.order_id')
 				->join('LEFT JOIN products p ON oi.product_id = p.id')
@@ -71,6 +71,7 @@ class OrdersModel extends Model
 					'total' => $orders[$i]->total,
 					'status' => $orders[$i]->status,
 					'payment_type' => $orders[$i]->payment_type,
+					'payment_status' => $orders[$i]->payment_status,
 					'items' => [],
 				];
 
@@ -92,7 +93,7 @@ class OrdersModel extends Model
 	/**
 	 * Create New order
 	 *
-	 * @return void
+	 * @return int
 	 */
 	public function create($orderData)
 	{
@@ -125,7 +126,26 @@ class OrdersModel extends Model
 				->data('count', $item->count)
 				->insert($this->orderItemsTable);
 		}
+
+		return $orderId;
 	}
+
+		/**
+     * update record status
+     *
+     * @param int $id
+     * @param int $status
+     * @return void
+     */
+    public function updatePaymentData($id, $status, $paymentId, $paymentStatus)
+    {
+        $this
+            ->data('status', $status)
+            ->data('payment_id', $paymentId)
+            ->data('payment_status', $paymentStatus)
+            ->where('id=?', $id)
+            ->update($this->table);
+    }
 
 	/**
      * update record status

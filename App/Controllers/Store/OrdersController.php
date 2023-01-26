@@ -35,10 +35,16 @@ class OrdersController extends Controller
     public function create()
     {
         $loginModel = $this->load->model('Login');
+        $user = $loginModel->user();
+
+        if (!is_numeric($user->default_address_id)) {
+            $json['redirectTo'] = $this->url->link('/profile/addresses');
+            return json_encode($json);
+        }
         $cartModel = $this->load->model('Cart');
         $settingsModel = $this->load->model('Settings');
 
-        $products = $cartModel->getCartProducts($loginModel->user()->id);
+        $products = $cartModel->getCartProducts($user->id);
 
         $subtotalPrice = $this->subtotalPrice($products);
         $vat = (($settingsModel->get('vat')) * $subtotalPrice) / 100;
@@ -47,23 +53,23 @@ class OrdersController extends Controller
         $paymentType = $this->request->post('payment-method');
 
         $orderData['items'] = $products;
-        $orderData['user-id'] = $loginModel->user()->id;
+        $orderData['user-id'] = $user->id;
         $orderData['total'] = $total;
         $orderData['subtotal'] = $subtotalPrice;
         $orderData['shipping'] = $shipping;
         $orderData['vat'] = $vat;
         $orderData['status'] = 'processing';
         $orderData['payment-type'] = $paymentType;
-        $orderData['address-id'] = $loginModel->user()->default_address_id;
+        $orderData['address-id'] = $user->default_address_id;
         $orderData['payment-status'] = 'unpaid';
         $orderData['created'] = time();
 
-
         $ordersModel = $this->load->model('Orders');
 
-        $ordersModel->create($orderData);
+        $orderId = $ordersModel->create($orderData);
+        $orderData['id'] = $orderId;
 
-        $cartModel->clearUserCart($loginModel->user()->id);
+        $cartModel->clearUserCart($user->id);
 
         $json['success'] = true;
         $json['message'] = 'Order placed successfully';

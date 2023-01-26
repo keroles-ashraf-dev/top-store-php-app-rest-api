@@ -54,3 +54,4 @@ $app->route->add('/search', 'Store/Search');
 
 // payment
 $app->route->add('/payment', 'Store/Payment');
+$app->route->add('/payment/check-status', 'Store/Payment@checkPaymentStatus');

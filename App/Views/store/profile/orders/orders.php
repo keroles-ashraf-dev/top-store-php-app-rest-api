@@ -40,6 +40,10 @@
 				<span>Payment type</span>
 				<span>'. $order['payment_type'] .'</span>
 				</div>
+				<div class="col">
+				<span>Payment status</span>
+				<span>'. $order['payment_status'] .'</span>
+				</div>
 				</div>
 				';
 

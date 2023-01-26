@@ -49,6 +49,8 @@
     echo inject_html($html, ['path' => assets('store/css/chat.css')]);
   } else if (str_starts_with($path, '/search')) {
     echo inject_html($html, ['path' => assets('store/css/search.css')]);
+  }else if (str_starts_with($path, '/payment')) {
+    echo inject_html($html, ['path' => assets('store/css/payment.css')]);
   }
   ?>
 
