@@ -14,7 +14,7 @@ Skills:
 - Design patters factory, singlaton etc
 - OOP
 - Restful api
-- Auto loading system
+- Auto loading system from scratch without composer
 - Php websocket (realtime chat)
 - SPA
 
